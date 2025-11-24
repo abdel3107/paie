@@ -2,6 +2,11 @@
 
 Ce dépôt contient un manuel complet pour comprendre et configurer la paie camerounaise dans Odoo.
 
+## 📥 Formats Disponibles
+
+- **Markdown** : `MANUEL_PAIE_CAMEROUNAISE.md` (pour consultation en ligne)
+- **PDF** : `MANUEL_PAIE_CAMEROUNAISE.pdf` (pour impression et consultation hors ligne)
+
 ## 📚 Contenu du Manuel
 
 Le fichier **`MANUEL_PAIE_CAMEROUNAISE.md`** contient un guide exhaustif de **3,122 lignes** couvrant tous les aspects de la paie au Cameroun, spécifiquement pour l'Hôpital Général de Douala.
@@ -128,6 +133,25 @@ Chaque exemple montre le calcul du brut au net avec tous les détails!
 4. **Configurer Odoo** en suivant la PARTIE 9
 5. **Tester** avec des cas réels
 6. **Former l'équipe** utilisatrice
+
+## 🔧 Régénération du PDF
+
+Si vous modifiez le manuel Markdown et souhaitez régénérer le PDF :
+
+### Prérequis
+```bash
+sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-latex-extra
+```
+
+### Génération
+```bash
+make pdf
+```
+
+Ou directement avec pandoc :
+```bash
+pandoc MANUEL_PAIE_CAMEROUNAISE.md -o MANUEL_PAIE_CAMEROUNAISE.pdf --pdf-engine=xelatex -V geometry:margin=1in -V linkcolor:blue -V documentclass=article -V papersize=a4 -V fontsize=11pt
+```
 
 ## 📞 Support
 
