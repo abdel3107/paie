@@ -7,6 +7,10 @@ all: pdf
 
 # Generate PDF from Markdown
 pdf:
+	@if [ ! -f MANUEL_PAIE_CAMEROUNAISE.md ]; then \
+		echo "Error: MANUEL_PAIE_CAMEROUNAISE.md not found!"; \
+		exit 1; \
+	fi
 	@echo "Generating PDF from MANUEL_PAIE_CAMEROUNAISE.md..."
 	pandoc MANUEL_PAIE_CAMEROUNAISE.md \
 		-o MANUEL_PAIE_CAMEROUNAISE.pdf \

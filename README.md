@@ -150,7 +150,7 @@ make pdf
 
 Ou directement avec pandoc :
 ```bash
-pandoc MANUEL_PAIE_CAMEROUNAISE.md -o MANUEL_PAIE_CAMEROUNAISE.pdf --pdf-engine=xelatex -V geometry:margin=1in -V linkcolor:blue -V documentclass=article
+pandoc MANUEL_PAIE_CAMEROUNAISE.md -o MANUEL_PAIE_CAMEROUNAISE.pdf --pdf-engine=xelatex -V geometry:margin=1in -V linkcolor:blue -V documentclass=article -V papersize=a4 -V fontsize=11pt
 ```
 
 ## 📞 Support
